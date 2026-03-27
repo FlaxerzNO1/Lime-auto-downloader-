@@ -1,8 +1,8 @@
-# TR SS Auto Downloader
+# Lime aac auto downloader
 
-TR SS Auto Downloader, TR SS Community'deki Toolları hızlıca indirmeye yarayan SS süresini kısaltmak ve toolları indirirken pratiklik sağlamak amacıyla yapılmıştır.
+Lime aac için yapılmıştır.
 
-### discord:discord.gg/6pFnJVUMjm
+### https://discord.gg/TEMbNBdEb3
 
 Önerileriniz ve şikayetleriniz için discord sunucumuza katılabilirsiniz.
 
@@ -13,7 +13,7 @@ TR SS Auto Downloader, TR SS Community'deki Toolları hızlıca indirmeye yaraya
 ### Çalıştırma
 PowerShell'i yönetici açıp şu komutu girerek çalıştırabilirsiniz:
 ```powershell
-$script = Invoke-RestMethod "https://raw.githubusercontent.com/korkusuzadX/TR-SS-AutoDownloader/main/TR_SS_Auto_Downloader.ps1"
+$script = Invoke-RestMethod "https://raw.githubusercontent.com/FlaxerzNO1/Lime-auto-downloader-/main/Lime auto downloader.ps1"
 $script = $script.TrimStart([char]0xFEFF)
 Invoke-Expression $script
 ```
@@ -23,5 +23,5 @@ böyle olmasının sebebi UTF-8 ile UTF-8 BOM arası fark Türkçe karakter dest
 PowerShell'i yönetici açıp şu komutu girerek çalıştırabilirsiniz:
    ```powershell
    Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process
-   ./TR_SS_Auto_Downloader.ps1
+   ./Lime auto downloader.ps1
    ```
