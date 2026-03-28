@@ -1237,7 +1237,9 @@ $dosyalar = @(
         @{ Url = "https://www.nirsoft.net/utils/jumplistsview.zip"; Ad = "JumpListsView.zip" }
         @{ Url = "https://www.nirsoft.net/utils/computeractivityview.zip"; Ad = "ComputerActivityView.zip" }
         @{ Url = "https://www.nirsoft.net/utils/usbdrivelog.zip"; Ad = "USBDriveLog.zip" }
-        @{ Url = "https://www.nirsoft.net/utils/lastactivityview.zip"; Ad = "lastactivityview.zip" } 
+        @{ Url = "https://www.nirsoft.net/utils/lastactivityview.zip"; Ad = "Lastactivityview.zip" } 
+        @{ Url = "https://www.nirsoft.net/utils/windeflogview.zip"; Ad = "Windeflogview" }
+        @{ Url = "https://github.com/santiagolin/TimeChangeDetect/releases/download/1.0/TimeChangeDetect.exe"; Ad = "TimechangeDetect" } 
     )
 
     $target = Join-Path $downloadsPath "ScreenShareTools"
