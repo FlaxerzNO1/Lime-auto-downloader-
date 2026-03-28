@@ -1232,7 +1232,7 @@ $dosyalar = @(
         @{ Url = "https://github.com/ponei/JournalTrace/releases/download/1.0/JournalTrace.exe"; Ad = "JournalTrace.exe" }
         @{ Url = "https://github.com/ponei/CachedProgramsList/releases/download/1.1/CachedProgramsList.exe"; Ad = "CachedProgramsList.exe" }
         @{ Url = "https://privazer.com/en/shellbag_analyzer_cleaner.exe"; Ad = "ShellBagAnalyzerCleaner.exe" }
-        @{ Url = "https://dl.echo.ac/tool/journal"; Ad = "Journal.exe" }
+        @{ Url = "https://github.com/korkusuzadX/TR-SS-AutoDownloader/blob/main/echo%20tools/echo-journal.exe; Ad = "Journal.exe" }
         @{ Url = "https://www.nirsoft.net/utils/browsinghistoryview.zip"; Ad = "BrowsingHistoryView.zip" }
         @{ Url = "https://www.nirsoft.net/utils/browserdownloadsview-x64.zip"; Ad = "WebBrowserDownloadsView.zip" }
         @{ Url = "https://www.nirsoft.net/utils/jumplistsview.zip"; Ad = "JumpListsView.zip" }
