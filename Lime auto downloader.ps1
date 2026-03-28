@@ -1225,7 +1225,7 @@ function New-PurpleButton($text, $top, $action) {
 $downloadsPath = (New-Object -ComObject Shell.Application).NameSpace('shell:Downloads').Self.Path
 
 New-PurpleButton "SS Tools" 120 {
-$dosyalar = @(
+    $dosyalar = @(
         @{ Url = "https://www.voidtools.com/Everything-1.4.1.1029.x86-Setup.exe"; Ad = "Everything-Setup.exe" }
         @{ Url = "https://www.nirsoft.net/utils/winprefetchview-x64.zip"; Ad = "WinPrefetchView_x64.zip" }
         @{ Url = "https://sourceforge.net/projects/processhacker/files/processhacker2/processhacker-2.39-setup.exe/download"; Ad = "ProcessHacker-2.39-setup.exe" }
@@ -1238,12 +1238,20 @@ $dosyalar = @(
         @{ Url = "https://www.nirsoft.net/utils/computeractivityview.zip"; Ad = "ComputerActivityView.zip" }
         @{ Url = "https://www.nirsoft.net/utils/usbdrivelog.zip"; Ad = "USBDriveLog.zip" }
         @{ Url = "https://www.nirsoft.net/utils/lastactivityview.zip"; Ad = "Lastactivityview.zip" } 
-        @{ Url = "https://www.nirsoft.net/utils/windeflogview.zip"; Ad = "Windeflogview" }
-        @{ Url = "https://github.com/santiagolin/TimeChangeDetect/releases/download/1.0/TimeChangeDetect.exe"; Ad = "TimechangeDetect" } 
+        @{ Url = "https://www.nirsoft.net/utils/windeflogview.zip"; Ad = "Windeflogview.zip" }
+        @{ Url = "https://github.com/korkusuzadX/TR-SS-AutoDownloader/raw/main/echo%20tools/echo-journal.exe"; Ad = "Journal.exe"; Klasor = "Echo-journal" }
+        @{ Url = "https://github.com/santiagolin/TimeChangeDetect/releases/download/1.0/TimeChangeDetect.exe"; Ad = "TimechangeDetect.exe" } 
     )
 
     $target = Join-Path $downloadsPath "ScreenShareTools"
-    Invoke-TaskWithProgress -Title "Tools indiriliyor..." -Items $dosyalar -TargetPath $target -RunAfterDownload $false
+    if (!(Test-Path $target)) { New-Item -ItemType Directory -Path $target -Force }
+
+    Invoke-TaskWithProgress -Title "Tools indiriliyor..." -Items $dosyalar -TargetPath $target -ActionPerItem {
+        param($item, $path)
+        $kayitYolu = Join-Path $path $item.Ad
+        
+        Invoke-WebRequest -Uri $item.Url -OutFile $kayitYolu -UseBasicParsing -TimeoutSec 120 -UserAgent "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" -ErrorAction SilentlyContinue
+    }
 }
 
 New-PurpleButton "PowerShell Scripts" 175 {
