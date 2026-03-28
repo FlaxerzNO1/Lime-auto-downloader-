@@ -1238,6 +1238,7 @@ $dosyalar = @(
         @{ Url = "https://www.nirsoft.net/utils/jumplistsview.zip"; Ad = "JumpListsView.zip" }
         @{ Url = "https://www.nirsoft.net/utils/computeractivityview.zip"; Ad = "ComputerActivityView.zip" }
         @{ Url = "https://www.nirsoft.net/utils/usbdrivelog.zip"; Ad = "USBDriveLog.zip" }
+        @{ Url = "https://www.nirsoft.net/utils/lastactivityview.zip"; Ad = "lastactivityview.zip" } 
     )
 
     $target = Join-Path $downloadsPath "ScreenShareTools"
